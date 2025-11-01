@@ -13,7 +13,7 @@ Content-type: text/html
 
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=http://challenge.localhost/publish\">
+    <meta http-equiv="refresh" content="0; url=http://challenge.localhost/publish">
   </head>
 </html>
 ```
