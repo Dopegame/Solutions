@@ -12,5 +12,5 @@
 ```nc -v -l challenge.localhost 1337```
 
 -----------------------------------------
-#### It will return a cookie to which curl will give return the flag:
+#### It will return a cookie to which curl will return the flag:
 ```curl -b "auth=admin|.QXygTN2wyMzYDOzEzW}" http://challenge.localhost```
