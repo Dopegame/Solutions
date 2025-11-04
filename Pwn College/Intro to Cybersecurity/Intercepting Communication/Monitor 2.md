@@ -45,7 +45,7 @@ for i, line in enumerate(data.splitlines()):
 
 ```
 
-#### Returned that the chacaters for the flag were in odd spaces which didn't make sense
+#### Returned that the chacaters for the flag were in even indeces, also realised I put Even for both...
 
 <img width="423" height="389" alt="Screenshot 2025-11-04 125130" src="https://github.com/user-attachments/assets/e80fd651-758a-40cf-8084-d93d68cc2dc3" />
 
