@@ -97,15 +97,14 @@ End of assembler dump.
 ---------------------------------------------
 
 #### Looking for cmp calls, first one is <+53>:    cmpl   $0x1,-0x24(%rbp)
-#### Theres a lea at <+96>:    lea    0xb85(%rip),%rsi        # 0x4020ec
-#### Checking this comment shows its the .cimg
+#### Checking this comment shows its .cimg
 ```asm
 (gdb) x/s 0x4020ec
 0x4020ec:       ".cimg"
 ```
 --------------------------------------------
 
-#### Next theres 4 movzbl followed by cmp calls, the hex code show what the magic number is:
+#### Next theres 4 cmp calls, the hex code show what the magic number is:
 ```asm
 0x00000000004015da <+218>:   movzbl -0x1c(%rbp),%eax
    0x00000000004015de <+222>:   cmp    $0x28,%al
