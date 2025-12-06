@@ -31,8 +31,9 @@ def gen_file():
         f.write(data)
 
     io = process(['/challenge/cimg', 's.cimg'])
-    resp = io.recvall(timeout=1)
-    flag = re.search(rb'')
+    out = io.recvall(timeout=1)
+    flag = flag = re.search(rb'pwn\.college\{.*?\}', out).group()
+    print(flag)
 
 if __name__ == '__main__':
     gen_file()
